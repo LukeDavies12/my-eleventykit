@@ -8,7 +8,6 @@ This project includes the following setup right out of the box
 -   Parcel
 -   TailwindCSS
 -   AlpineJS
--   Feather Icons
 
 It also includes some handy defaults already configured
 
@@ -22,10 +21,6 @@ It also includes some handy defaults already configured
 ## Getting Started
 
 ```bash
-# A few options:
-# 1. Click "Use this template" above to create a new repo
-# 2. Clone this repo to your local machine
-
 # Install dependencies
 npm install
 
@@ -41,14 +36,6 @@ npm run build
 By default, all pages are located in `src/pages`. Add all of your pages and subdirectories here. By default I have created all files with the `.liquid` extension. You are totally free to use whatever flavor you want, [eleventy supports a large list of template languages](https://www.11ty.dev/docs/languages)
 
 > If you change, make sure to add in the desired language to the purge array, found in `tailwind.config.js` . By default, its `'./src/**/*.liquid'`
-
-## Using Icons
-
-Adding an icon is simple, just add in a `<i></i>` html element with the `data-feather` attribute. Example below. By default Feather Icons are used.
-
-```html
-<i data-feather="camera"></i>
-```
 
 ## Public Assets
 
