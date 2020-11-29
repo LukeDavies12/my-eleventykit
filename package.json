@@ -1,0 +1,61 @@
+{
+    "name": "eleventykit",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
+    },
+    "prettier": {
+        "semi": false,
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 70,
+        "tabWidth": 4,
+        "useTabs": false,
+        "bracketSpacing": true
+    },
+    "scripts": {
+        "preinstall": "npx npm-force-resolutions",
+        "clean": "rimraf dist",
+        "serve:eleventy": "npx @11ty/eleventy --serve",
+        "serve:parcel": "cross-env NODE_ENV=development parcel watch src/js/main.js --dist-dir dist/assets",
+        "dev": "npm-run-all clean --parallel serve:*",
+        "build:eleventy": "npx @11ty/eleventy",
+        "build:parcel": "cross-env NODE_ENV=production parcel build ./src/js/main.js --dist-dir dist/assets",
+        "build": "npm-run-all clean build:*"
+    },
+    "keywords": [
+        "eleventy",
+        "alpinejs",
+        "tailwindcss",
+        "static",
+        "parcel"
+    ],
+    "author": "Luke Davies",
+    "license": "MIT",
+    "dependencies": {
+        "@11ty/eleventy": "^0.11.0",
+        "@babel/core": "^7.10.5",
+        "@babel/preset-env": "^7.10.4",
+        "@tailwindcss/typography": "^0.3.1",
+        "alpinejs": "^2.5.0",
+        "autoprefixer": "^9.8.5",
+        "cross-env": "^7.0.2",
+        "html-minifier": "^4.0.0",
+        "npm-run-all": "^4.1.5",
+        "parcel": "^2.0.0-nightly.462",
+        "postcss": "^8.1.10",
+        "postcss-import": "^13.0.0",
+        "postcss-nested": "^5.0.1",
+        "prettier": "^2.0.5",
+        "rimraf": "^3.0.2",
+        "tailwindcss": "^1.6.0"
+    },
+    "devDependencies": {},
+    "resolutions": {
+        "node-forge": "0.10.0"
+    }
+}       
