@@ -9,6 +9,7 @@ dist/
 
 # Parcel
 .cache/
+.parcel-cache/
 
 # Misc
 *.log
